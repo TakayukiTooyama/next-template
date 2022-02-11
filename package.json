@@ -14,7 +14,9 @@
     "fix:eslint": "yarn lint:eslint --fix",
     "fix:prettier": "yarn lint:prettier --write",
     "test": "jest --env=jsdom --verbose",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public"
   },
   "author": "Takayuki Tooyama",
   "license": "ISC",
@@ -29,10 +31,18 @@
   },
   "dependencies": {
     "next": "^12.0.10",
+    "next-seo": "^5.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
+    "@storybook/react": "^6.4.18",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -42,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.8.0",
     "eslint-config-next": "^12.0.10",
     "eslint-config-prettier": "^8.3.0",
@@ -59,8 +70,10 @@
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
+    "storybook-addon-next": "^1.4.2",
     "tailwindcss": "^3.0.20",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "webpack": "5"
   },
   "lint-staged": {
     "*.{ts,tsx}": "yarn fix:eslint",
