@@ -1,10 +1,10 @@
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-import { Home } from '@/pages/index';
+import { Home } from "@/pages/index";
 
-it('Should render hello text', () => {
+it("Should render hello text", () => {
   render(<Home />);
-  expect(screen.getByText('Hello, World')).toBeInTheDocument();
+  expect(screen.getByText("Hello, World")).toBeInTheDocument();
 });

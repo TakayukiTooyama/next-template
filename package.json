@@ -19,7 +19,7 @@
   "author": "Takayuki Tooyama",
   "license": "ISC",
   "prettier": {
-    "printWidth": 120
+    "printWidth": 80
   },
   "postcss": {
     "plugins": {

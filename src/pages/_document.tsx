@@ -1,10 +1,10 @@
-import { Head, Html, Main, NextScript } from 'next/document';
+import { Head, Html, Main, NextScript } from "next/document";
 
 export const MyDocument = () => {
-  const url = '';
-  const title = 'Next.js Tailwind CSS セットアップ';
+  const url = "";
+  const title = "Next.js Tailwind CSS セットアップ";
   const description =
-    'Next.js + TyepScript + Tailwind CSS + ESLint + Prettier + Jest + React-testing-library + lint-stage + Husky';
+    "Next.js + TyepScript + Tailwind CSS + ESLint + Prettier + Jest + React-testing-library + lint-stage + Husky";
 
   return (
     <Html lang="ja-JP">
