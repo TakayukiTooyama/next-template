@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 
-export const Home: NextPage = () => {
+const Root: NextPage = () => {
   return <div>Hello, World</div>;
 };
+
+export default Root;
