@@ -1,0 +1,30 @@
+import clsx from "clsx";
+import { useMemo } from "react";
+
+import type { ButtonVariant } from "./type";
+
+export const useButtonClass = (className?: string, variant?: ButtonVariant) => {
+  const classes = useMemo(() => {
+    return clsx(
+      "grid place-items-center font-bold rounded-full focus:outline-none focus-visible:ring-2 transition duration-200 ease-in-out",
+      {
+        "border dark:border-zinc-500 focus:ring-2 focus:ring-blue-400": variant === "outline",
+        "hover:text-blue-400 focus-visible:text-blue-400 hover:bg-blue-50 focus-visible:bg-blue-50 dark:hover:bg-zinc-700 dark:focus-visible:bg-zinc-700 focus-visible:ring-blue-400":
+          variant === "ghost",
+        "text-white bg-blue-500 hover:bg-blue-600 focus-visible:bg-blue-600 focus-visible:ring-blue-400":
+          variant === "solid-blue",
+        "text-white bg-red-500 hover:bg-red-600 focus-visible:bg-red-600 focus-visible:ring-red-400":
+          variant === "solid-red",
+        "bg-zinc-100 hover:bg-zinc-200 focus-visible:bg-zinc-200 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:focus-visible:bg-zinc-600 focus-visible:ring-blue-400":
+          variant === "solid-zinc",
+        "dark:text-black bg-white hover:bg-zinc-100 focus:bg-zinc-100 dark:hover:bg-zinc-200 dark:focus:bg-zinc-200":
+          variant === "solid-white",
+        "text-white bg-black hover:bg-zinc-800 focus:bg-zinc-800 dark:hover:bg-zinc-900 dark:focus:bg-zinc-900":
+          variant === "solid-black",
+      },
+      className
+    );
+  }, [className, variant]);
+
+  return classes;
+};

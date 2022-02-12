@@ -19,10 +19,7 @@ module.exports = {
     "prefer-const": "error",
     "func-style": ["error", "expression"],
     "arrow-body-style": ["error", "always"],
-    "no-restricted-imports": [
-      "error",
-      { paths: [{ name: "react", importNames: ["default"] }] },
-    ],
+    "no-restricted-imports": ["error", { paths: [{ name: "react", importNames: ["default"] }] }],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "error",
@@ -46,10 +43,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/consistent-type-imports": [
-      "warn",
-      { prefer: "type-imports" },
-    ],
+    "@typescript-eslint/consistent-type-imports": ["warn", { prefer: "type-imports" }],
     "@typescript-eslint/no-unused-vars": [
       "error",
       { varsIgnorePattern: "^_", argsIgnorePattern: "^_" },
@@ -78,11 +72,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        "src/pages/**/*.page.tsx",
-        "src/pages/api/**/*.page.ts",
-        "**/*.stories.tsx",
-      ],
+      files: ["src/pages/**/*.page.tsx", "src/pages/api/**/*.page.ts", "**/*.stories.tsx"],
       rules: {
         "import/no-default-export": "off",
         "@typescript-eslint/naming-convention": [
