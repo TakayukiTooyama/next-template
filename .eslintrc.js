@@ -18,21 +18,12 @@ module.exports = {
     "prefer-arrow-callback": "error",
     "prefer-const": "error",
     "func-style": ["error", "expression"],
-    "arrow-body-style": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: true }],
     "no-restricted-imports": ["error", { paths: [{ name: "react", importNames: ["default"] }] }],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "error",
-    "react/jsx-handler-names": [
-      "error",
-      {
-        eventHandlerPrefix: "handle",
-        eventHandlerPropPrefix: "on",
-        checkLocalVariables: true,
-        checkInlineFunction: true,
-      },
-    ],
-    "react/destructuring-assignment": ["error", "never"],
+    "react/destructuring-assignment": ["error", "always"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "import/newline-after-import": "error",
@@ -50,8 +41,6 @@ module.exports = {
     ],
     "@typescript-eslint/naming-convention": [
       "error",
-      { selector: ["typeAlias", "typeParameter"], format: ["PascalCase"] },
-      { selector: ["property", "method"], format: ["camelCase"] },
       {
         selector: "variable",
         types: ["boolean"],
@@ -72,16 +61,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["src/pages/**/*.page.tsx", "src/pages/api/**/*.page.ts", "**/*.stories.tsx"],
+      files: ["src/pages/**/*.tsx", "src/pages/api/**/*.ts"],
       rules: {
         "import/no-default-export": "off",
         "@typescript-eslint/naming-convention": [
-          "error",
-          { selector: ["typeAlias", "typeParameter"], format: ["PascalCase"] },
-          {
-            selector: ["classProperty", "typeProperty", "method"],
-            format: ["camelCase"],
-          },
           {
             selector: "variable",
             types: ["boolean"],
